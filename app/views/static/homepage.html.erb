@@ -1,0 +1,6 @@
+<h1>The Ideas App</h1>
+<%if current_user%>
+<p>welcome to the app, <%=current_user.email%></p>
+<%else%>
+<p>sign in!</p>
+<%end%>

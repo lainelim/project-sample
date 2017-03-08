@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProjectSample</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<!-- bootstrap theme -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
+  </head>
+
+  <body>
+    <%= render "partials/navbar"%>
+    <div class="container">
+
+    <% if notice %>
+      <!-- show notice -->
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <!-- show alert -->
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+  </div>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%= render "/partials/footer"%>
+  </body>
+</html>
